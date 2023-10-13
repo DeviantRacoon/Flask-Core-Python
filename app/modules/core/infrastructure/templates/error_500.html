@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 500 - Error interno del servidor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf2f9; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .error-container {
+            text-align: center;
+            background-color: #ffffff; 
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-heading {
+            font-size: 36px;
+            color: #e74c3c; 
+        }
+
+        .error-message {
+            font-size: 20px;
+            margin: 20px 0;
+            color: #555; 
+        }
+
+        .error-message-context {
+            font-size: 12px;
+            margin: 20px 0;
+            color: #555; 
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c; 
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #c0392b; 
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-heading">¡Ups! Algo salió mal</h1>
+        <p class="error-message">Ocurrió un error interno del servidor.</p>
+        <p class="error-message-context">{{error}}</p>
+        <a href="/" class="btn">Volver a la página de inicio</a>
+    </div>
+</body>
+</html>

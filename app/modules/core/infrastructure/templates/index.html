@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .api-info {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .api-heading {
+            font-size: 24px;
+            color: #3498db; 
+        }
+
+        .api-description {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #555; 
+        }
+
+        .api-example {
+            font-size: 14px;
+            color: #555; 
+        }
+    </style>
+</head>
+<body>
+    <div class="api-info">
+        <h1 class="api-heading">Bienvenido a {{title}}</h1>
+        <p class="api-description">Nuestra API proporciona acceso a datos y servicios. Aquí tienes algunos ejemplos:</p>
+        <p class="api-example">- Obtener todos los usuarios: <code>GET /api/users</code></p>
+        <p class="api-example">- Obtener un usuario por ID: <code>GET /api/users/{user_id}</code></p>
+        <p class="api-example">- Crear un nuevo usuario: <code>POST /api/users</code></p>
+    </div>
+</body>
+</html>
