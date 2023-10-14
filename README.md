@@ -3,7 +3,7 @@
  <img width=600px height=200px src="https://flask.palletsprojects.com/en/3.0.x/_images/flask-horizontal.png" alt="Project logo"></a>
 </p>
 
-<h1 align="center">Flask Core</h1>
+<h1 align="center">Flask Core API</h1>
 
 <div align="center">
 
@@ -15,7 +15,7 @@
 
 ---
 
-<p align="center"> Core Module for Clean Architecture Code in Project Flask.
+<p align="center"> Core Module for Clean Architecture Code in Project Flask, API REST.
     <br> 
 </p>
 
@@ -67,9 +67,10 @@ pip install -r requirements.txt
 ## Contains <a name = "contains"></a>
 
 - **Swagger:** *pending*.
-- **JWT:** *pending*.
+- **JWT:** complete.
 - **MySQL:**  complete.
-- **Encrypt Password:** *pending*.
+- **loggings:**  complete.
+- **Hash Password:** *pending*.
 
 
 ## Authors <a name = "authors"></a>

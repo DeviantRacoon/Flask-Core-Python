@@ -12,8 +12,13 @@ class UserUseCase:
     def getUsersUseCase(self):
         data = self.user_service.getUsersService()
         
-        Users: list[User] = [self.user_factory.toJson(User) for User in data]        
-        return Users
+        users: list[User] = [self.user_factory.toJson(User) for User in data]        
+        return users
+    
+    
+    def getUserByUsername(self, username: str):
+        user = self.user_service.getUserByUsername(username)
+        return user
     
     
     def getUserByPkUseCase(self, idUser: int):
@@ -28,6 +33,10 @@ class UserUseCase:
         
         if not user.person:
             raise Exception("No has agregado persona al usuario")
+        
+        isAvailable = self.getUserByUsername(user.username)
+        if isAvailable:
+            raise Exception("Ya existe un usuario con ese nombre")
         
         response = self.user_service.saveUsersService(user)
         return response

@@ -19,6 +19,11 @@ class UserService:
         return users
     
     
+    def getUserByUsername(self, username: str):
+        user: User = UserEntity.query.filter_by(username = username).first()
+        return user
+    
+    
     def getUserByPkService(self, idUser: int):
         users: User = self.db.get_or_404(UserEntity, idUser)
         return users
