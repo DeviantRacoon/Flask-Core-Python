@@ -1,4 +1,4 @@
-from config.route_middleware import env
+from config.dotenv import env
 from utils.errors_handlers import app
 from config.database import database as db
 from config.logging import logger

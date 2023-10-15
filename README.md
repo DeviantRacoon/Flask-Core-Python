@@ -70,7 +70,7 @@ pip install -r requirements.txt
 - **JWT:** complete.
 - **MySQL:**  complete.
 - **loggings:**  complete.
-- **Hash Password:** *pending*.
+- **Hash Password:** complete.
 
 
 ## Authors <a name = "authors"></a>
