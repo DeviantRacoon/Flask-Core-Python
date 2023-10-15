@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from .database import setConfig
-from . import env
+from .dotenv import env
 from modules.core.infrastructure.routes import person_route, user_route
 from .jwt import setConfigJWT
 

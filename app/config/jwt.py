@@ -1,6 +1,7 @@
 from flask_jwt_extended import JWTManager, create_access_token
 from modules.core.application.use_cases.user_usecase import UserUseCase
 from modules.core.application.factories.user_factory import UserFactory
+from utils.hashing import Hashing
 from datetime import timedelta
 
 class AuthManager:
@@ -8,14 +9,17 @@ class AuthManager:
     def __init__(self):
         self.userUseCase =  UserUseCase()
         self.userFactory =  UserFactory()
+        self.hashing =  Hashing()
     
     def authenticate(self, credentials: dict):
         user = self.userUseCase.getUserByUsername(credentials['username'])
+        auth = self.hashing.CheckHash(user.password, credentials['password'])
         
-        if user == None or credentials['password'] != user.password:
+        if auth:
+            return user
+        else:
             return
-        
-        return user
+             
     
     
     def create_token(self, user):

@@ -1,12 +1,14 @@
 from ..services import user_service
 from ..factories import user_factory
 from...domain.models.user_model import User
+from utils.hashing import Hashing
 
 class UserUseCase:
     
     def __init__(self):
         self.user_service = user_service.UserService()
         self.user_factory = user_factory.UserFactory()
+        self.hashing = Hashing()
     
     
     def getUsersUseCase(self):
@@ -38,6 +40,7 @@ class UserUseCase:
         if isAvailable:
             raise Exception("Ya existe un usuario con ese nombre")
         
+        user.password = self.hashing.generateHash(user.password)
         response = self.user_service.saveUsersService(user)
         return response
     
