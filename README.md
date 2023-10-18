@@ -68,8 +68,10 @@ pip install -r requirements.txt
 
 - **Swagger:** *pending*.
 - **JWT:** complete.
+- **CORS:** complete.
 - **MySQL:**  complete.
 - **loggings:**  complete.
+- **ENV:**  complete.
 - **Hash Password:** complete.
 
 
